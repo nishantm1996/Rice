@@ -1,0 +1,10 @@
+D:\LEARN\PC App Development\Test0\Test0\bin\Debug\Test0.exe.config
+D:\LEARN\PC App Development\Test0\Test0\bin\Debug\Test0.exe
+D:\LEARN\PC App Development\Test0\Test0\bin\Debug\Test0.pdb
+D:\LEARN\PC App Development\Test0\Test0\bin\Debug\cybleautobase.dll
+D:\LEARN\PC App Development\Test0\Test0\bin\Debug\cyblecommonbase.dll
+D:\LEARN\PC App Development\Test0\Test0\bin\Debug\cybledonglecommunicator.dll
+D:\LEARN\PC App Development\Test0\Test0\obj\Debug\Test0.csprojResolveAssemblyReference.cache
+D:\LEARN\PC App Development\Test0\Test0\obj\Debug\Test0.csproj.Test0.exe.config
+D:\LEARN\PC App Development\Test0\Test0\obj\Debug\Test0.exe
+D:\LEARN\PC App Development\Test0\Test0\obj\Debug\Test0.pdb

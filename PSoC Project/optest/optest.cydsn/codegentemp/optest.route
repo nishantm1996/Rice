@@ -1,0 +1,36 @@
+net ClockBlock_HFCLK
+	term   ":m0s8clockblockcell.hfclk"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_15.clock"
+	term   ":interrupt_15.clock"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_12.clock"
+	term   ":interrupt_12.clock"
+end ClockBlock_HFCLK
+net \ADC:Net_3112\
+	term   ":p4sarcell.irq"
+	switch ":p4sarcell.irq==>:interrupt_idmux_15.in_0"
+	switch ":interrupt_idmux_15.interrupt_idmux_15__out==>:interrupt_15.interrupt"
+	term   ":interrupt_15.interrupt"
+end \ADC:Net_3112\
+net \BLE:Net_15\
+	term   ":p4blecell.interrupt"
+	switch ":p4blecell.interrupt==>:interrupt_idmux_12.in_0"
+	switch ":interrupt_idmux_12.interrupt_idmux_12__out==>:interrupt_12.interrupt"
+	term   ":interrupt_12.interrupt"
+end \BLE:Net_15\
+net __ONE__
+	term   ":udb@[UDB=(0,1)]:pld0:mc0.q"
+	switch ":udb@[UDB=(0,1)]:pld0:mc0.q==>:udb@[UDB=(0,1)]:pld0:output_permute3.q_0"
+	switch ":udb@[UDB=(0,1)]:pld0:output_permute3.output_3==>Stub-:udbswitch@[UDB=(0,1)][side=top]:v30"
+	switch "OStub-:udbswitch@[UDB=(0,1)][side=top]:v30"
+	switch ":udbswitch@[UDB=(0,1)][side=top]:30,0"
+	switch ":hvswitch@[UDB=(1,0)][side=left]:31,0_f"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:vseg_31_bot_f"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:31,29_b"
+	switch ":hvswitch@[UDB=(0,0)][side=left]:hseg_29_b"
+	switch ":dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:102,29_f"
+	switch "IStub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v100+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v102+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v98"
+	switch "Stub-:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v100+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v102+:dsiswitch_top@[DSI=(0,0)][side=top]:dsihc_top:v98==>:ioport3:inputs2_mux.in_2"
+	switch ":ioport3:inputs2_mux.pin7__pin_input==>:ioport3:hsiom_out7.dsi"
+	switch ":ioport3:hsiom_out7.hsiom7_out==>:ioport3:pin7.pin_input"
+	term   ":ioport3:pin7.pin_input"
+end __ONE__
